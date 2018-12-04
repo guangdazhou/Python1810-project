@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/register.css' %}"/>
+    <script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/idcode.js' %}"></script>
+    <script src="{% static 'js/register.js' %}"></script>
+</head>
+<body>
+<div id="top-logo">
+    <!--<div id="logo-img">-->
+    <a href=""><img src="{% static 'img/register-logo.png' %}" alt=""></a>
+    <!--</div>-->
+</div>
+<h2>帮5买，畅享全球品质生活！</h2>
+<div id="header">
+    <p>欢迎注册</p>
+</div>
+<div id="register-form">
+    <form action="{% url 'app:register' %}" method="post">
+        {% csrf_token %}
+        <ul>
+            <li class="li-item">
+                <p class="p1">
+                    <input class="username" type="text" placeholder="验证手机" name="username">
+                    <i></i>
+                    <span class="p2">完成验证后，您可以用该手机号登录和找回密码</span>
+                </p>
+
+            </li>
+            <li id="pic-code">
+                <p class="p1">
+                    <input type="text" id="Txtidcode" class="txtVerification" placeholder="请输入验证码">
+                    <span id="idcode"></span>
+{#                    <span class="span2">#}
+{#                        <a class="a1" onclick="$.idcode.setCode()">看不清</a>#}
+{#                        <a class="a2" onclick="$.idcode.setCode()">换一换</a>#}
+{#                    </span>#}
+{#                    <span class="p2">输入右边图片文字，验证通过后获取短信验证码</span>#}
+                </p>
+
+            </li>
+{#            <li id="msg-code">#}
+{#                <p class="p1">#}
+{#                    <input type="text" placeholder="短信验证码">#}
+{#                    <a> 获取短信验证码 </a>#}
+{#                </p>#}
+{#            </li>#}
+            <li class="li-item">
+                <p class="p1">
+                    <input class="password" type="password" placeholder="请设置密码" name="password"><i></i>
+                    <span class="p2">6-15位字母，建议字母、数字及下划线两种以上组合</span>
+                <p class="p3" id="safe">安全等级：<span></span></p>
+                </p>
+
+            </li>
+            <li class="li-item">
+                <p class="p1">
+                    <input class="password2" type="password" placeholder="请验证密码">
+                    <span class="p2">请再次输入密码</span>
+                </p>
+
+            </li>
+            <li class="li-item check">
+                <p class="p1">
+                    <input class="checkbox" type="checkbox" checked="checked">
+                    <a href="">我已阅读并同意《帮5买用户注册协议》</a>
+                </p>
+            </li>
+            <li class="li-item  zhuce">
+                <p class="p1">
+                    <input type="submit" value="注册">
+                </p>
+            </li>
+            <li class="li-item denglu">
+                <p class="p1">
+                    <a href="{% url 'app:login' %}"><input type="button" value="登陆"></a>
+                </p>
+            </li>
+
+        </ul>
+    </form>
+</div>
+</body>
+</html>

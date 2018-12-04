@@ -1,0 +1,791 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/css.css' %}"/>
+
+    <script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+    <script src="{% static 'js/Js.js' %}"></script>
+    <script src="{% static 'js/Goods-details.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/Goods-details.css' %}"/>
+    {#    <script src="{% static 'js/text.js' %}"></script>#}
+</head>
+<body>
+<!--=========加入购物车弹窗==============-->
+<div id="rightBar" style="height: 764px;">
+    <div id="barContent" style="top: 232px;">
+        <ul class="bar-list">
+            <li class="li1 li">
+                <div class="bar-item-logo erji"></div>
+                <!--<div class="bar-item1"></div>-->
+                <div class="bar-item-tip">小帮帮咨询
+                    <div class="bar-item1"></div>
+                </div>
+            </li>
+            <li class="li2 li">
+                <div class="bar-item-logo weixin"></div>
+
+                <div class="bar-item-tip">
+                    <div class="bar-item1"></div>
+                    <div class="bar-weixin"></div>
+                    <p class="p1">关注享更多优惠信息</p>
+                </div>
+            </li>
+            <!--<li class="li3">-->
+            <!--<a href="">-->
+            <!--<div class="bar-item-logo cart"></div>-->
+            <!--<div class="" style="font-size: 14px;width: 16px;height: 70px;margin-left: 10px;color: white">购物车<i>0</i></div>-->
+            <!--<div class="bar-item-tip" style="display: none"></div>-->
+            <!--</a>-->
+            <!--</li>-->
+            <li class="li4 li">
+                <div class="bar-item-logo collect"></div>
+                <!--<div class="bar-item1"></div>-->
+                <a href="">
+
+                    <div class="bar-item-tip">我的收藏
+                        <div class="bar-item1"></div>
+                    </div>
+                </a>
+            </li>
+            <li class="li5 li">
+                <div class="bar-item-logo code"></div>
+                <!--<div class="bar-item1"></div>-->
+                <div class="bar-item-tip">
+                    <div class="bar-item1"></div>
+                    <div class="app-code"></div>
+                    <p class="p2">下载APP 享更多优惠</p>
+                </div>
+            </li>
+            <li class="li6">
+                <div class="bar-item-logo top"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="top">
+    <div id="topContent">
+        <div id="topLeft">
+            <img src="{% static 'img/top1.png' %}" alt="">
+        </div>
+        <div id="topCenter">
+            <input class="inp1" type="text" placeholder="在这里，淘遍全球正品好货">
+            <input class="inp2" type="button" value="搜索">
+            <ul>
+                <li class="li1">大扫除</li>
+                <li class="li1">开学季</li>
+                <li>面膜</li>
+                <li>防晒</li>
+                <li>洗发护发</li>
+                <li>裸妆</li>
+                <li>健康生活</li>
+                <li>宝宝哺乳</li>
+                <li>身体护理</li>
+                <li>卸妆</li>
+                <li>纸尿裤</li>
+            </ul>
+        </div>
+        <div id="topRight">
+            <a href="" class="a1"><i class="i1"></i> 400-085-0505 </a>
+            <a href="" class="a1"><i class="i2"></i> kefu@b5m.com </a>
+            <a href="#" class="a2"><i class="i3"></i>常见问题</a>
+        </div>
+    </div>
+</div>
+<!--导航栏nav-->
+<div id="nav">
+    <div id="nav0">
+        <div id="navContent">
+            <ul id="navUl">
+                <li class="li1"><a class="a1" href="#" style="display:block;"> 首页 </a>
+                    <a class="a2" href="" style="display:none; font-size: 20px; text-align: center;line-height: 40px">帮海贝</a>
+                </li>
+                <li><a href="#">美妆个护 <i class="i"></i> </a>
+                </li>
+                <li><a href="#">母婴专区 <i class="i"></i> </a></li>
+                <li><a href="#">服饰鞋包 <i class="i"></i> </a></li>
+                <li><a href="#">家具生活 <i class="i"></i> </a></li>
+                <li><a href="#">食品保健 <i class="i"></i> </a></li>
+                <li><a href="#">数码家电 <i class="i"></i> </a></li>
+                <li><a href="#">韩国直邮 <i class="i"></i> </a></li>
+
+                <a id="lastli"> <i class="lasti"></i></a>
+
+            </ul>
+
+            <div id="phone" style="display: none">
+                <span><i><img src="{% static 'img/phone.png' %}" alt=""></i> <p>400-085-0505</p></span>
+                <a><img src="{% static 'img/fixed-cart.png' %}" alt=""></a>
+            </div>
+
+            <div id="navRight">
+                <i class="i1"></i>
+                <i class="i2"></i>
+                <i class="i3"></i>
+                <i class="i4"></i>
+            </div>
+
+
+            <div id="navList1" class="navList">
+                <div id="list1Left" class="listLeft">
+                    <div id="list1Box1" class="listBox">
+                        <h4>魅力彩妆</h4>
+                        <a href="#" target="_blank">粉饼/粉底</a> |
+                        <a href="#" target="_blank" style="color: red">BB霜/CC霜</a> |
+                        <a href="#" target="_blank" style="color: red">唇彩/唇蜜</a> <br>
+                        <a href="#" target="_blank" style="color: red">卸妆</a> |
+                        <a href="#" target="_blank">隔离/妆前</a> |
+                        <a href="#" target="_blank" style="color: red">眉笔/眉粉</a> <br>
+                        <a href="#" target="_blank" style="color: red">睫毛膏/液</a> |
+                        <a href="#" target="_blank" style="color: red">眼线</a> |
+                        <a href="#" target="_blank">散粉/蜜粉</a> <br>
+                        <a href="#" target="_blank" style="color: red">美妆工具/遮瑕</a> |
+                        <a href="#" target="_blank">眼影</a> |
+                        <a href="#" target="_blank">美甲/护甲</a> <br>
+                        <a href="#" target="_blank">腮红</a> |
+                        <a href="#" target="_blank">修颜</a> |
+                        <a href="#" target="_blank" style="color: red">香水香氛</a>
+                    </div>
+                    <div id="list1Box2" class="listBox">
+                        <h4>面部护理</h4>
+                        <a href="#" target="_blank">T区护理</a> |
+                        <a href="#" target="_blank">唇部护理</a> |
+                        <a href="#" target="_blank">护肤套装</a> <br>
+                        <a href="#" target="_blank">眼部护理</a> |
+                        <a href="#" target="_blank">精华液</a> |
+                        <a href="#" target="_blank" style="color: red">乳液/面霜</a> <br>
+                        <a href="#" target="_blank" style="color: red">面膜</a> |
+                        <a href="#" target="_blank" style="color: red">化妆水</a> |
+                        <a href="#" target="_blank" style="color: red">防晒修复</a> <br>
+                        <a href="#" target="_blank">洁面</a> |
+
+                    </div>
+                    <div id="list1Box3" class="listBox">
+                        <h4>身体护理</h4>
+                        <a href="#" target="_blank">特殊护理</a> |
+                        <a href="#" target="_blank">足部护理</a> |
+                        <a href="#" target="_blank" style="color: red">止汗/脱毛</a> <br>
+                        <a href="#" target="_blank" style="color: red">沐浴用品</a> |
+                        <a href="#" target="_blank" style="color: red">身体喷雾</a> |
+                        <a href="#" target="_blank" style="color: red">驱蚊/爽身</a> <br>
+                        <a href="#" target="_blank">美体/塑身</a> |
+                        <a href="#" target="_blank">手部护理</a> |
+
+                    </div>
+                    <div id="list1Box4" class="listBox">
+                        <h4>洗发护发</h4>
+                        <a href="#" target="_blank">护发素/精油</a> |
+                        <a href="#" target="_blank">护发套装</a> |
+                        <a href="#" target="_blank" style="color: red">洗发水</a> <br>
+
+                    </div>
+                    <div id="list1Box5" class="listBox">
+                        <h4>口腔卫生</h4>
+                        <a href="#" target="_blank">漱口水</a> |
+                        <a href="#" target="_blank" style="color: red">牙刷</a> |
+                        <a href="#" target="_blank" style="color: red">牙膏</a>
+
+                    </div>
+                    <div id="list1Box6" class="listBox">
+                        <h4>贴身护理</h4>
+                        <a href="#" target="_blank">女性护液</a> |
+                        <a href="#" target="_blank" style="color: red">卫生巾</a> |
+                        <a href="#" target="_blank" style="color: red">安全避孕</a>
+
+                    </div>
+                </div>
+                <div id="list1Right" class="listLogo">
+                    <h4>热门品牌</h4>
+                    <div class="logoBox">
+                        <a href=""><img src="{% static 'img/16.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/86.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/99.jpg' %}" alt=""></a>
+
+                        <a href=""><img src="{% static 'img/47.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/73.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/96.jpg' %}" alt=""></a>
+
+                        <a href=""><img src="{% static 'img/51.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/28.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/10.jpg' %}" alt=""></a>
+
+                        <a href=""><img src="{% static 'img/26.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/29.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/40.jpg' %}" alt=""></a>
+
+                        <a href=""><img src="{% static 'img/18.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/95.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/72.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="navList2" class="navList">
+                <div id="list2Left" class="listLeft">
+                    <div id="list2Box1" class="listBox">
+                        <h4>尿裤湿巾</h4>
+                        <a href="#" target="_blank" style="color: red">纸尿裤/拉拉裤</a> |
+                        <a href="#" target="_blank">湿巾</a> |
+                        <a href="#" target="_blank">日本花王</a> <br>
+                        <a href="#" target="_blank">丹麦班博</a> |
+                        <a href="#" target="_blank">日本尤妮佳</a> |
+
+                    </div>
+                    <div id="list2Box2" class="listBox">
+                        <h4>洗漱护肤</h4>
+                        <a href="#" target="_blank">衣物护理</a> |
+                        <a href="#" target="_blank" style="color: red">宝宝口腔</a> |
+                        <a href="#" target="_blank">婴儿护肤</a> <br>
+                        <a href="#" target="_blank" style="color: red">洗发沐浴</a> |
+                        <a href="#" target="_blank">妙思乐</a> |
+                        <a href="#" target="_blank">艾维诺</a> <br>
+                        <a href="#" target="_blank">保宁</a> |
+                        <a href="#" target="_blank">德国维蕾德</a> |
+
+                    </div>
+                    <div id="list2Box3" class="listBox">
+                        <h4>喂养用品</h4>
+                        <a href="#" target="_blank">奶具辅助品</a> |
+                        <a href="#" target="_blank" style="color: red">儿童餐具</a> |
+                        <a href="#" target="_blank" style="color: red">奶瓶/奶嘴</a> <br>
+                        <a href="#" target="_blank">妈米</a> |
+                        <a href="#" target="_blank">新安怡</a> |
+                        <a href="#" target="_blank">贝亲</a> <br>
+
+                    </div>
+                    <div id="list2Box4" class="listBox">
+                        <h4>日常用品</h4>
+                        <a href="#" target="_blank">清理防护</a> |
+                        <a href="#" target="_blank" style="color: red">退烧降温</a> |
+                        <a href="#" target="_blank" style="color: red">驱蚊防虫</a> <br>
+                        <a href="#" target="_blank">加州宝宝</a> |
+                        <a href="#" target="_blank">花王湿巾</a> |
+                        <a href="#" target="_blank">三次元</a>
+                    </div>
+                    <div id="list2Box5" class="listBox">
+                        <h4>孕妈必备</h4>
+                        <a href="#" target="_blank">待产新生</a> |
+                        <a href="#" target="_blank" style="color: red">孕妈洗护</a> |
+                        <a href="#" target="_blank">地球妈妈</a><br>
+                        <a href="#" target="_blank">碧芝莱</a> |
+                        <a href="#" target="_blank">防孕妊纹</a> |
+                        <a href="#" target="_blank">帕玛氏</a> <br>
+                        <a href="#" target="_blank">孕妈按摩油</a> |
+
+                    </div>
+                </div>
+                <div id="list2Right" class="listLogo">
+                    <h4>热门品牌</h4>
+                    <div class="logoBox">
+                        <a href=""><img src="{% static 'img/92.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/85.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/56.jpg' %}" alt=""></a>
+
+                        <a href=""><img src="{% static 'img/90.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/31.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/61.jpg' %}" alt=""></a>
+
+                        <a href=""><img src="{% static 'img/60.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/27.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/79.jpg' %}" alt=""></a>
+
+                        <a href=""><img src="{% static 'img/76.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/5.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/12.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="navList3" class="navList">
+                <div id="list3Left" class="listLeft">
+                    <div id="list3Box1" class="listBox">
+                        <h4>热卖女装</h4>
+                        <a href="#" target="_blank" style="color: red">美腿袜</a>
+
+                    </div>
+                    <div id="list3Box2" class="listBox">
+                        <h4>鞋包配件</h4>
+                        <a href="#" target="_blank">双肩包</a> |
+                        <a href="#" target="_blank">单肩包</a> |
+                        <a href="#" target="_blank">手提包</a> <br>
+                        <a href="#" target="_blank">斜挎包</a> |
+                        <a href="#" target="_blank">钱包</a> |
+                        <a href="#" target="_blank">女鞋</a> <br>
+                        <a href="#" target="_blank">男鞋</a> |
+                        <a href="#" target="_blank">太阳眼镜</a> |
+
+                    </div>
+                </div>
+                <div id="list3Right" class="listLogo">
+                    <h4>热门品牌</h4>
+                    <div class="logoBox">
+                        <a href=""><img src="{% static 'img/87.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/53.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="navList4" class="navList">
+                <div id="list4Left" class="listLeft">
+                    <div id="list4Box1" class="listBox">
+                        <h4>厨房清洁</h4>
+                        <a href="#" target="_blank">驱虫除臭</a>
+                        <a href="#" target="_blank" style="color: red">洗洁精</a>
+
+                    </div>
+                    <div id="list4Box2" class="listBox">
+                        <h4>家居日用</h4>
+                        <a href="#" target="_blank">滤水壶/滤芯</a> |
+                        <a href="#" target="_blank">水杯</a> |
+                        <a href="#" target="_blank">保温杯</a> <br>
+                        <a href="#" target="_blank">保鲜盒</a> |
+                        <a href="#" target="_blank">眼罩</a> |
+                        <a href="#" target="_blank">口罩</a> |
+                        <a href="#" target="_blank">其他</a>
+
+                    </div>
+                    <div id="list4Box3" class="listBox">
+                        <h4>衣物清洁</h4>
+                        <a href="#" target="_blank">洗衣粉/液/皂</a>
+                    </div>
+
+                </div>
+                <div id="list4Right" class="listLogo">
+                    <h4>热门品牌</h4>
+                    <div class="logoBox">
+                        <a href=""><img src="{% static 'img/33.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/57.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/14.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="navList5" class="navList">
+                <div id="list5Left" class="listLeft">
+                    <div id="list5Box1" class="listBox">
+                        <h4>休闲食品</h4>
+                        <a href="#" target="_blank">冲调饮品</a> |
+                        <a href="#" target="_blank">调味粮油</a> |
+                        <a href="#" target="_blank" style="color: red">休闲零食</a> <br>
+                        <a href="#" target="_blank" style="color: red">饼干糕点</a> |
+                        <a href="#" target="_blank" style="color: red">糖果</a>
+
+                    </div>
+                    <div id="list5Box2" class="listBox">
+                        <h4>营养保健</h4>
+                        <a href="#" target="_blank">正官庄</a>
+
+                    </div>
+                </div>
+                <div id="list5Right" class="listLogo">
+                    <h4>热门品牌</h4>
+                    <div class="logoBox">
+                        <a href=""><img src="{% static 'img/2.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/97.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/103.jpg' %}" alt=""></a>
+                        <a href="" style="border-right: 1px solid lightgrey;border-bottom: 1px solid lightgrey;"><img
+                                src="{% static 'img/9.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="navList6" class="navList">
+                <div id="list6Left" class="listLeft">
+                    <div id="list6Box1" class="listBox">
+                        <h4>生活电器</h4>
+                        <a href="#" target="_blank">厨房电器</a> |
+                        <a href="#" target="_blank" style="color: red">家居电器</a>
+
+                    </div>
+                    <div id="list6Box2" class="listBox">
+                        <h4>3C数码</h4>
+                        <a href="#" target="_blank">耳机/耳麦</a> |
+                        <a href="#" target="_blank">电脑/周边</a>
+
+                    </div>
+                    <div id="list6Box3" class="listBox">
+                        <h4>个护电器</h4>
+                        <a href="#" target="_blank">美容美发</a> |
+                        <a href="#" target="_blank">剃须刀</a> |
+                        <a href="#" target="_blank" style="color: red">电动牙刷</a> <br>
+                        <a href="#" target="_blank">美体</a>
+
+                    </div>
+                    <div id="list6Box4" class="listBox">
+                        <h4>办公用品</h4>
+                        <a href="#" target="_blank">笔类</a> |
+                        <a href="#" target="_blank">文件夹</a>
+                    </div>
+                </div>
+                <div id="list6Right" class="listLogo">
+                    <h4>热门品牌</h4>
+                    <div class="logoBox">
+                        <a href=""><img src="{% static 'img/69.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/14.jpg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/64.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--===========头部共有部分=============================-->
+<div id="goods">
+    <div id="goods-content">
+        {% for showgood in showgoods %}
+            <p class="p1">
+                <a href="index.html">首页</a>&nbsp;&gt;&nbsp;
+                <a class="" href="">尿片/洗护/喂哺/推车床</a>&nbsp;&gt;&nbsp;
+                <a class="" href="">水杯/餐具/研磨/附件</a>&nbsp;&gt;&nbsp;
+                <a class="" href="">水杯</a>&nbsp;&gt;&nbsp;
+                <span>{{ showgood.title }}</span>
+            </p>
+            <div id="goods-detail">
+                <!--商品图片信息==============-->
+                <div id="detail-left">
+                    <div id="left-img">
+                        <div id="smallImg" class="img-json">
+                            <img src="{{ showgood.img1 }}" alt="">
+                            <div id="smallArea">
+                            </div>
+                        </div>
+
+                        <!--============大图=========-->
+                        <div id="bigArea" class="img-json"
+                             style=" overflow: hidden;width: 300px;height: 300px; position: absolute;left: 470px;top: 108px;z-index: 9999;">
+
+
+                            {#                            <img id="bigImg" src="{{ showgood.img1 }}" alt="" />#}
+                        </div>
+
+
+                        <div id="goods-small-img">
+                            <a href=""> < </a>
+                            <div class="small-img">
+                                <div class="img-json img">
+                                    <img src="{{ showgood.img2 }}" alt="">
+                                </div>
+                            </div>
+                            <a href=""> > </a>
+                        </div>
+                        <div id="goods-bar">
+                            <a href="" class="first-a"><img src="{% static 'img/imgs/icon-unfavo.png' %}" alt=""></a> 收藏
+                            &nbsp;&nbsp;
+                            <a href=""><img src="{% static 'img/imgs/icon-unshare.png' %}" alt=""></a> 分享到：
+                            <a href=""><img src="{% static 'img/imgs/icon-sina.png' %}" alt=""></a>
+                            <a href=""><img src="{% static 'img/imgs/icon-weibo.png' %}" alt=""></a>
+                            <a href=""><img src="{% static 'img/imgs/icon-weixin.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <!--商品文字信息==================-->
+                    <div id="right-word" class="img-json">
+                        <b><i></i>{{ showgood.title }}</b>
+                        <p class="p1">{{ showgood.detail }}</p>
+                        <p class="p2">价格 <span class="span1">{{ showgood.span1 }}</span></p>
+                        <p class="p3">发货 <span class="span1">国内保税仓</span> <span class="span2">预计7个工作日内到货，部分偏远地区除外</span>
+                        </p>
+                        <p class="p4">税费 <span class="span1">含税价，若配送期间产生税费，请联系客服</span></p>
+                        <p class="p5">颜色分类 <span class="span1">{{ showgood.span2 }}<i></i></span></p>
+                        <p class="p6">容量 <span class="span1"> {{ showgood.span3 }} <i></i></span></p>
+                        <p class="p7">数量
+                            <span class="span1">
+                            <a>-</a><input type="text" value="1"/><a>+</a> 件
+                        </span>
+                        </p>
+                        <p class="p8">销量 <span class="span1"><b>{{ showgood.span4 }}</b>件</span></p>
+                        {#                        <p class="p9"><span class="span1">你已选择</span> <span class="span2">"蜜蜂"、"350mL"</span></p>#}
+                        <p class="p10"><a><input class="inp1" type="button" value="立即购买"></a> <a><input class="inp2"
+                                                                                                        type="button"
+                                                                                                        value="加入购物车"></a>
+                        </p>
+
+                        <div id="app-tittle">
+                            <span class="span1">APP <span class="span11">红包</span></span> <br>
+                            <span class="span2">再下单</span>
+                            <i></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--右侧看了又看===================-->
+                <div id="detail-right">
+                    <p class="p1">看了又看 <a></a></p>
+                    <ul id="detail-right-list">
+                        <li class="li1">
+                            <a href=""><img src="{% static 'img/imgs/33.jpg' %}" alt=""></a>
+                            <p class="p1"> 日本 KUMANO 熊野马油无硅洗发水护发素600ml/瓶 </p>
+                            <p class="p2"> ¥59 </p>
+                        </li>
+                        <li class="li2">
+                            <a href=""><img src="{% static 'img/imgs/34.jpg' %}" alt=""></a>
+                            <p class="p1"> 韩国 LANEIGE 兰芝水漾粉饼SPF25/PA++15g/盒 </p>
+                            <p class="p2"> ¥219 </p>
+                        </li>
+                    </ul>
+                    <a href="" class="list-img"><img src="{% static 'img/imgs/41.png' %}" alt=""></a>
+                </div>
+
+
+                <!--====================================-->
+                <div id="msg-info">
+                    <img src="{% static 'img/imgs/msg-info.png' %}" alt="">
+                </div>
+                <!--======商品参数=============-->
+                <div id="product-introduce">
+                    <div id="product-left">
+                        <div class="relate-product">
+                            相关产品
+                        </div>
+                        <div class="relate-picture">
+                            <a href="">
+                                <img src="{% static 'img/imgs/39.jpg' %}" alt="">
+                                <p class="p1">印度尼西亚 AVENT 新安怡新款卡通企鹅杯学饮杯260ML/个</p>
+                                <p class="p2">￥82</p>
+                            </a>
+
+                            <a href="">
+                                <img src="{% static 'img/imgs/36.jpg' %}" alt="">
+                                <p class="p1">印度尼西亚 AVENT 新安怡新款卡通企鹅杯学饮杯340ML/个</p>
+                                <p class="p2">￥88</p>
+                            </a>
+                            <a href="">
+                                <img src="{% static 'img/imgs/35.jpg' %}" alt="">
+                                <p class="p1">日本 Pigeon 贝亲宝宝防漏大容量吸管水杯330ml/个*2</p>
+                                <p class="p2">￥169</p>
+                            </a>
+                            <a href="">
+                                <img src="{% static 'img/imgs/38.jpg' %}" alt="">
+                                <p class="p1">美国 SKIP HOP 儿童动物系列吸管杯蜜蜂350ml*2</p>
+                                <p class="p2">￥118</p>
+                            </a>
+                            <a href="">
+                                <img src="{% static 'img/imgs/37.jpg' %}" alt="">
+                                <p class="p1">美国 SKIP HOP 儿童动物系列吸管杯瓢虫350ml*2</p>
+                                <p class="p2">￥115</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="product-right">
+                        <div class="content">
+
+                            <div class="tittle">
+                                <div class="btn">
+                                    <a class="a1">商品参数</a>
+                                    <a>商品介绍</a>
+                                    <a>用户评价(<span>1</span>)</a>
+                                    <a>用户咨询</a>
+                                </div>
+                            </div>
+                            <!--===============-->
+                            <div class="content-img">
+
+
+                                <div class="img-product scroll">
+                                    <div class="img-pro">
+                                        <h2>商品参数</h2>
+                                        <div class="pro-box">
+                                            <div class="img-box">
+                                                <img src="{% static 'img/imgs/00.jpg' %}" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>【产地】：美国</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pro-introduce scroll">
+                                    <h2>商品介绍</h2>
+                                    <div class="introduce-box">
+                                        <img src="{% static 'img/imgs/32.jpg' %}" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="show-picture">
+                                    <img src="{% static 'img/imgs/01.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/02.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/03.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/04.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/05.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/06.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/07.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/08.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/09.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/10.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/11.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/12.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/13.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/14.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/15.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/16.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/17.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/18.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/19.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/20.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/21.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/22.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/23.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/24.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/25.png' %}" alt="">
+                                    <img src="{% static 'img/imgs/26.png' %}" alt="">
+                                    <img src="{% static 'img/imgs/27.png' %}" alt="">
+                                    <img src="{% static 'img/imgs/28.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/29.jpg' %}" alt="">
+                                    <img src="{% static 'img/imgs/30.png' %}" alt="">
+                                </div>
+
+                                <div class="pro-comment  scroll">
+                                    <h2>用户评价</h2>
+                                    <div class="comment-box">
+                                        <ul class="ul-list">
+                                            <li class="li1">全部评论(1)</li>
+                                            <li class="li2">好评(1)</li>
+                                            <li class="li3">中评(0)</li>
+                                            <li class="li4">差评(0)</li>
+                                            <li class="li5">有图片的评论(0)</li>
+                                        </ul>
+
+                                        <div class="comments">
+                                            <div class="comment-letter">
+                                                <div class="left-box">
+                                                    <img src="{% static 'img/imgs/a.png' %}" alt="">
+                                                    <span class="span1">帮***户</span>
+                                                    <span class="span2">2016/09/15</span>
+                                                    <span class="span3">10:10:08</span>
+                                                </div>
+                                                <div class="right-box">
+                                                    <p>评论内容：不错</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="page">
+                                        <div class="pagination">
+                                            <div class="page-btn">
+                                                <a href=""> &lt; </a>
+                                                <a href="" class="a2"> 1 </a>
+                                                <a href="" class=""> &gt; </a>
+                                                第 <input type="text"> 页
+                                                <a href="" class="a2"> GO </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--========用户咨询======-->
+                                <div class="consult  scroll">
+                                    <h2>用户咨询</h2>
+                                    <div class="user-consulting">
+                                        <p class="">
+                                            <a href=""><img src="{% static 'img/imgs/details-click.png' %}" alt=""></a>
+                                            购买前如有问题，请向帮5买会员顾问咨询。
+                                        </p>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 帮5买帮海贝是个什么平台？</span>
+                                            <span class="span2"><em>A</em> 帮5买帮海贝致力打造专业的全球正品海淘平台，
+                                        专业买手精挑细选，专业跨境物流直送到家。为顾客提供快捷、实惠、放心的海淘体验。
+                                        品类涵盖：化妆品，母婴、保健、服装，饰品，鞋类，箱包，数码、食品等，
+                                        帮您淘尽全球好货是我们努力的目标，买全球正品，就来帮5买帮海贝吧。
+                                    </span>
+                                        </div>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 帮5买帮海贝商品都是正品吗？</span>
+                                            <span class="span2"><em>A</em> 帮5买帮海贝上所售卖的商品均确保正品，
+                                        支持假一罚十，帮5买在韩国有分公司进行直接采购和品质把控，
+                                        所选择的产品都来自品牌方或正规授权渠道方，确保100%正品和低价。
+                                    </span>
+                                        </div>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 帮5买帮海贝的发货速度怎么样？</span>
+                                            <span class="span2"><em>A</em> 帮5买帮海贝目前有保税仓发货和海外直邮等发货方式。
+                                        国内保税仓货物客户下单经过海关查验后直接国内快递发货，基本保证2-7天到货。
+                                        海外直邮采取空运直邮，预计1-2周内到货。<br>购买时请注意查看预计到货时间。
+                                    </span>
+                                        </div>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 既然是海外商品，退货会不会很麻烦？</span>
+                                            <span class="span2"><em>A</em> 亲，对于所有商品，质量问题都是支持7天退货的，
+                                        并且我们会补偿运费。
+                                    </span>
+                                        </div>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 退货后钱款多久可以到账？</span>
+                                            <span class="span2"><em>A</em> 亲，退款时间银联7-10个工作日，
+                                        微信支付3-5个工作日，财付通3-5个工作日。
+                                        届时请关注账户余额动态。
+                                    </span>
+                                        </div>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 保税仓或直邮商品下单后可以取消或更改地址吗？</span>
+                                            <span class="span2"><em>A</em> 保税仓商品由海关监管，下单后即视为商品清关，
+                                        清关商品无法重新退回海外，故不可取消或更改地址，请谅解。
+                                        海外直邮商品未发货前可取消并可修改地址。
+                                    </span>
+                                        </div>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 为什么在帮海贝购物需要输入真实姓名和身份证号？</span>
+                                            <span class="span2"><em>A</em> 根据海关要求，购买海淘和保税仓商品时需要提交
+                                        实名身份证信息，否则商品将无法通过海关检查。帮海贝承诺收货人身份证信息
+                                        仅用于清关检查。
+                                    </span>
+                                        </div>
+                                        <div class="question">
+                                            <span class="span1"><em>Q</em> 在帮海贝购买的商品，是否提供发票？</span>
+                                            <span class="span2"><em>A</em> 帮海贝所售跨境海外商品，无法开据国内发票，
+                                        请您谅解。
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="notice">
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!--底部共有部分===============-->
+<div id="bottom">
+    <div id="bottomBox1">
+        <a target="_blank" class="item" href="#">帮5采</a> |
+        <a target="_blank" class="item" href="#">帮海贝</a> |
+        <!-- a target="_blank" class="item" href="http://job.b5m.com/">加入我们</a> | -->
+        <a target="_blank" class="item" href="#">移动应用</a> |
+        <a target="_blank" class="item" href="#">广告联盟</a> |
+        <a target="_blank" class="item" href="#">使用条款</a>
+    </div>
+    <div id="bottomBox2">
+        <p> Copyright © 2011-2016&nbsp;<span style="white-space:normal;">上海载和网络科技有限公司</span>. All rights reserved.
+            Powered by 上海载和网络科技有限公司<br>
+            增值电信业务经营许可证：沪B2-20130065号 | 中华人民共和国互联网药品信息服务资格证书（沪）-非经营性-2013-0034 沪卫(中医)网审【2015】10032号 沪ICP备11034776号-3 |
+            食品流通许可证：SP3101151410301755</p>
+    </div>
+    <div id="bottomBox3">
+        <a href=""><img src="{% static 'img/shgs.gif' %}" alt=""></a>
+        <a href=""><img src="{% static 'img/cxwz.png' %}" alt=""></a>
+        <a href=""><img src="{% static 'img/315.gif' %}" alt=""></a>
+        <a href=""><img src="{% static 'img/cnnic.png' %}" alt=""></a>
+        <a href=""><img src="{% static 'img/bottom_small_img.png' %}" alt=""></a>
+        <a href=""><img src="{% static 'img/4b.png' %}" alt=""></a>
+        <a href=""><img src="{% static 'img/picp_bg.png' %}" alt=""></a>
+
+    </div>
+</div>
+</body>
+</html>

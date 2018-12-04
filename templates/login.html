@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/login.css' %}"/>
+    <script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/idcode.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+</head>
+<body>
+<div id="top-logo">
+    <!--<div id="logo-img">-->
+    <a href=""><img src="{% static 'img/register-logo.png' %}" alt=""></a>
+    <!--</div>-->
+</div>
+<h2>帮5买，畅享全球品质生活！</h2>
+<div id="header">
+    <p>使用B5M账户登陆</p>
+</div>
+<div id="register-form">
+    <form action="{% url 'app:login' %}" method="post">
+        {% csrf_token %}
+        <ul>
+            <li class="li-item mail">
+                <p><input class="username" type="text" placeholder="邮箱/手机" name="username"></p>
+            </li>
+            <li class="li-item password" >
+                <p><input class="value" type="password" placeholder="密码" name="password"></p>
+            </li>
+{#            <li id="pic-code">#}
+{#                <p>#}
+{#                    <input type="text" id ="Txtidcode" class ="txtVerification" placeholder="图片验证码">#}
+{#                    <span id="idcode"></span>#}
+{#                    <span class="span2" >#}
+{#                        <a  class="a1" onclick="$.idcode.setCode()">看不清</a>#}
+{#                        <a  class="a2" onclick="$.idcode.setCode()">换一换</a>#}
+{#                    </span>#}
+{#                </p>#}
+{#            </li>#}
+
+            <li class="li-item check">
+                <p>
+                   使用其它账号登陆：<a href="" class="a1"></a><a href="" class="a2"></a><a href="" class="a3"></a>
+
+                </p>
+                <span class="span1">
+                    <a href="" class="forgetA">忘记密码？</a>
+                        <div id="forget-password">
+                            <a href="" class="a1"><i class="i1"></i>手机账号</a>
+                            <a href="" class="a2"><i class="i2"></i>邮箱账号</a>
+                            <span></span>
+                        </div>
+                </span>
+
+            </li>
+            <li class="li-item  denglu">
+                <p>
+                    <a ><input type="submit" value="登陆"></a>
+                </p>
+            </li>
+            <li class="li-item zhuce">
+                <p>
+                    <a href="{% url 'app:register' %}"><input type="button" value="注册"></a>
+                </p>
+            </li>
+
+        </ul>
+    </form>
+</div>
+</body>
+</html>

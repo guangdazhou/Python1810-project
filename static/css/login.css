@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background: lavender;
+}
+#top-logo {
+    min-width: 1000px;
+    height: 70px;
+}
+
+#top-logo  a {
+    display: block;
+    width: 130px;
+    height: 70px;
+    margin: 96px auto;
+    /*background: url("../img/register-logo.png")no-repeat;*/
+}
+h2{
+
+    /*font: 700 36px/40px "Microsoft YaHei";*/
+    font-weight: 700;
+    font-family: "Microsoft Yahei";
+    font-size: 40px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+#header{
+
+    margin: 65px 0 20px;
+}
+#header p{
+    width: 350px;
+    height: 20px;
+    margin: 0 auto;
+    font: 16px/18px "Microsoft YaHei";
+    color: #666;
+}
+
+#register-form{
+    min-width: 1000px;
+    height: 450px;
+
+}
+/*#register-form form ul li{*/
+    /*position: relative;*/
+    /*margin: 15px auto;*/
+
+/*}*/
+/*#register-form input{*/
+    /*border-radius: 3px;*/
+    /*border: 1px solid grey;*/
+/*}*/
+/*#register-form li{*/
+    /*width: 350px;*/
+    /*height: 44px;*/
+/*}*/
+#register-form li{
+    display: block;
+    width: 350px;
+    height: 44px;
+    margin: 0 auto;
+}
+#register-form .mail input{
+    border: 1px solid grey;
+    border-radius: 3px 3px 0 0;
+}
+#register-form .password input{
+    border: 1px solid grey;
+    border-radius:  0 0 3px 3px;
+    border-top: none;
+}
+#register-form .password {
+    margin-top: -2px;
+}
+/*#register-form .li-item  {*/
+/*width: 350px;*/
+/*height: 40px;*/
+/*}*/
+#register-form .li-item input  {
+    width: 350px;
+    height: 40px;
+}
+#register-form  #pic-code{
+    margin-top: 10px;
+}
+#register-form #pic-code input{
+    border: 1px solid grey;
+    border-radius: 3px;
+    width: 150px;
+    height: 40px;
+}
+#register-form  #pic-code  #idcode{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+    font-size: 30px;
+    text-align: center;
+
+}
+#register-form  #pic-code .span2{
+    display: inline-block;
+    width: 72px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+#register-form  #pic-code .span2 a{
+    display: block;
+    width: 72px;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#register-form  #pic-code .span2 .a1{
+    color: gray;
+}
+#register-form  #pic-code .span2 .a2{
+    color: blue;
+}
+#register-form form ul .check{
+    position: relative;
+}
+#register-form form ul .check .span1{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+#register-form form ul .check .span1 a{
+    font-size: 12px;
+    color: grey;
+    text-decoration: none;
+}
+#register-form form ul .check .span1 #forget-password{
+    display: none;
+    border: 1px solid darkorange;
+    border-radius: 5px;
+    width: 170px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    left: -63px;
+    top: -25px;
+    background: white;
+    z-index: 3;
+}
+#register-form form ul .check .span1 .forgetA{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+/*三角形===*/
+#register-form form ul .check .span1 #forget-password span{
+    width:0px;
+    height: 0px;
+    border-width:8px 8px 0;
+    /*content: "";*/
+    border-style:solid;
+    border-color:white transparent ;/*灰 透明 透明 */
+    margin:40px auto;
+
+    position: absolute;
+    top: -5px;
+    left: 75px;
+    z-index: 4;
+}
+
+#register-form form ul .check .span1 #forget-password i{
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background: url("../img/forget-password.png")no-repeat;
+}
+#register-form form ul .check .span1 #forget-password .i1{
+    background-position: 0 0;
+}
+#register-form form ul .check .span1 #forget-password .i2{
+    background-position: 0 -16px;
+}
+#register-form form ul .check p a{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-right: 12px;
+    background: url("../img/common-icon.png");
+    vertical-align: middle;
+}
+#register-form form ul .check p .a2{
+  background-position: -25px top;;
+}
+#register-form form ul .check p .a3{
+    background-position: -75px top;;
+}
+#register-form form ul .check p{
+    height: 20px;
+    font-size: 12px;
+    color: grey;
+    margin-top: 15px;
+}
+#register-form form ul .check p input{
+    width: 15px;
+    height: 15px;
+    font-family: 宋体;
+    vertical-align: middle;
+}
+#register-form form ul .check p a{
+    font-size: 13px;
+    text-decoration: none;
+    color: grey;
+    line-height: 20px;
+}
+#register-form form ul .zhuce{
+    margin-top: 15px;
+}
+#register-form form ul .denglu p input{
+    background:  #fd9819;
+    font-size: 18px;
+    color: white;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+#register-form form ul .zhuce p input{
+    background: white;
+    font-size: 18px;
+    color: gray;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*========================*/
+.ehong-idcode-val{
+    position:relative;
+    padding:1px 4px 1px 4px;
+    top:0px;
+    *top:-3px;
+    letter-spacing:4px;
+    display:inline;
+    cursor:pointer;
+    font-size:32px;
+    font-family:"Courier New", Courier, monospace;
+    text-decoration:none;
+    font-weight:bold;
+}
+.ehong-idcode-val0{
+    border:solid 1px #A4CDED;
+    background-color:#ECFAFB;
+}
+
+.ehong-idcode-val1{
+    border:solid 1px #A4CDED;
+    background-color:#FCEFCF;
+}
+.ehong-idcode-val2{
+    border:solid 1px #6C9;
+    background-color:#D0F0DF;
+}
+.ehong-idcode-val3{
+    border:solid 1px #6C9;
+    background-color:#DCDDD8;
+}
+.ehong-idcode-val4{
+    border:solid 1px #6C9;
+    background-color:#F1DEFF;
+}
+.ehong-idcode-val5{
+    border:solid 1px #6C9;
+    background-color:#ACE1F1;
+}
+.ehong-code-val-tip{
+    font-size:12px;
+    color:#1098EC;
+    top:0px;
+    *top:-3px;
+    position:relative;
+    margin:0px 0px 0px 4px;
+    cursor:pointer;
+}

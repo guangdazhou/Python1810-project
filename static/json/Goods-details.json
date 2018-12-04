@@ -1,0 +1,279 @@
+[
+  {
+    "id":"12",
+    "data":[
+        {
+            "tittle":"图片",
+            "img":[
+              {
+                "src":"/static/img/imgs/00.jpg"
+              },
+                {
+                    "src":"/static/img/imgs/00.jpg"
+                },
+                {
+                    "src":"/static/img/imgs/55.jpg"
+                }
+            ]
+
+        },
+        {
+          "tittle":"文字",
+           "word":[
+             {
+               "p": "<b><i class='img-json'></i>美国 SKIP HOP 儿童动物系列吸管杯蜜蜂350ml</b>",
+
+             },
+             {
+               "p": "Skip Hop是来自美国的知名时尚婴童品牌，可爱的动物杯型设计，让宝宝会情不自禁的喜欢上它，柔软硅胶吸管呵护宝宝牙龈。不含BPA，铅等有害物质，防漏设计，滑盖隐藏式吸管，更加卫生方便实用，带有挂带，可手提或固定在背包上，方便携带！"
+             },
+             {
+               "p": "价格<span class='span1'>¥62</span><span class='span2'>¥89</span> "
+             },
+             {
+               "p": "发货<span class='span1'>国内保税仓</span> <span class='span2'>预计7个工作日内到货，部分偏远地区除外</span>"
+             },
+             {
+               "p": "税费<span class='span1'>含税价，若配送期间产生税费，请联系客服</span>"
+             },
+             {
+               "p": "颜色分类<span class='span1'>蜜蜂<i></i></span>"
+             },
+             {
+               "p":"容量<span class='span1'>350ml<i></i></span>"
+             },
+             {
+               "p":"数量<span class='span1'><a class='add1'>-</a><input class='number' type='text' value='1' /><a class='add2' >+</a> 件</span>"
+             },
+             {
+               "p":"销量<span class='span1'><b class='pro-num'>1</b>件</span>"
+             },
+             {
+               "p":"<span class='span1'>你已选择</span><span class='span2'>'蜜蜂'、'350mL'</span>"
+             }
+           ]
+        }
+    ]
+  },
+
+  {
+    "id":"13",
+    "data":[
+      {
+        "tittle":"图片",
+        "img":[
+          {
+            "src":"/static/img/imgs/id=13-02.jpg"
+          },
+          {
+            "src":"/static/img/imgs/id=13-02.jpg"
+          },
+          {
+            "src":"/static/img/imgs/id=13-01.jpg"
+          }
+        ]
+
+      },
+      {
+        "tittle":"文字",
+        "word":[
+          {
+            "p": "<b><i class='img-json'></i>韩国 Amore 爱茉莉Happy Bath滋润补水酸奶洗面奶120g/支</b>"
+          },
+          {
+            "p": "新升级丰富泡沫，酸奶浓缩成分配合多种水果精华精制而成，丰盈泡沫温和洁面，让你更干净的清洁每一寸肌肤，多种水果精华滋养保湿，水果香味更为你献上愉悦的享受！"
+          },
+          {
+            "p": "价格 <span class='span1'>¥62</span><span class='span2'>¥89</span> "
+          },
+          {
+            "p": "发货 <span class='span1'>国内保税仓</span> <span class='span2'>预计7个工作日内到货，部分偏远地区除外</span>"
+          },
+          {
+            "p": "税费 <span class='span1'>含税价，若配送期间产生税费，请联系客服</span>"
+          },
+          {
+            "p": ""
+          },
+          {
+            "p":"容量 <span class='span1'>180g  <i></i></span>"
+          },
+          {
+            "p":"数量 <span class='span1'><a class='add1'>-</a><input class='number' type='text' value='1' /><a class='add2' >+</a> 件</span>"
+          },
+          {
+            "p":"销量 <span class='span1'><b class='pro-num'>1</b>件</span>"
+          },
+          {
+            "p":" <span class='span1'>你已选择</span> <span class='span2'>'180g '</span>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id":"14",
+    "data":[
+      {
+        "tittle":"图片",
+        "img":[
+          {
+            "src":"/static/img/imgs/id=14-02.jpg"
+          },
+          {
+            "src":"/static/img/imgs/id=14-02.jpg"
+          },
+          {
+            "src":"/static/img/imgs/id=14-01.jpg"
+          }
+        ]
+
+      },
+      {
+        "tittle":"文字",
+        "word":[
+          {
+            "p": "<b><i class='img-json'></i>日本 ALOVIVI 薏仁健康美容水500ml/瓶</b>"
+          },
+          {
+            "p": "日本新势力！Cosme 强推500ml大瓶化妆水界又一劲敌！保湿控油，细嫩，收缩毛孔。8倍薏仁精华治愈力更强大，高效滋润美肌，还能抑制痘痘的再生，恢复健康原始肌，用完只觉赚到。500ml大瓶任性敷用！"
+          },
+          {
+            "p": "价格 <span class='span1'>¥62</span><span class='span2'>¥89</span> "
+          },
+          {
+            "p": "发货 <span class='span1'>国内保税仓</span> <span class='span2'>预计7个工作日内到货，部分偏远地区除外</span>"
+          },
+          {
+            "p": "税费 <span class='span1'>含税价，若配送期间产生税费，请联系客服</span>"
+          },
+          {
+            "p": ""
+          },
+          {
+            "p":"容量 <span class='span1'>350ml  <i></i></span>"
+          },
+          {
+            "p":"数量 <span class='span1'><a class='add1'>-</a><input class='number' type='text' value='1' /><a class='add2' >+</a> 件</span>"
+          },
+          {
+            "p":"销量 <span class='span1'><b class='pro-num'>1</b>件</span>"
+          },
+          {
+            "p":" <span class='span1'>你已选择</span> <span class='span2'>'350mL'</span>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id":"15",
+    "data":[
+      {
+        "tittle":"图片",
+        "img":[
+          {
+            "src":"/static/img/imgs/id=15-02.jpg"
+          },
+          {
+            "src":"/static/img/imgs/id=15-02.jpg"
+          },
+          {
+            "src":"/static/img/imgs/id=15-01.jpg"
+          }
+        ]
+
+      },
+      {
+        "tittle":"文字",
+        "word":[
+          {
+            "p": "<b><i class='img-json'></i>德国 Herbacin 贺本清小甘菊柔皙滋润护手霜20ml/支*2</b>"
+          },
+          {
+            "p": "丰富的植物甘油锁水因子和德国洋甘菊添加，不仅补水，更帮助肌肤深层锁住水分，使双手持久滋润，肌肤时刻水润白皙！"
+          },
+          {
+            "p": "价格 <span class='span1'>¥36</span><span class='span2'>¥58</span> "
+          },
+          {
+            "p": "发货 <span class='span1'>国内保税仓</span> <span class='span2'>预计7个工作日内到货，部分偏远地区除外</span>"
+          },
+          {
+            "p": "税费 <span class='span1'>含税价，若配送期间产生税费，请联系客服</span>"
+          },
+          {
+            "p": "颜色分类 <span class='span1'>小甘菊   <i></i></span>"
+          },
+          {
+            "p":"容量 <span class='span1'>20ml/支  <i></i></span>"
+          },
+          {
+            "p":"数量 <span class='span1'><a class='add1'>-</a><input class='number' type='text' value='1' /><a class='add2' >+</a> 件</span>"
+          },
+          {
+            "p":"销量 <span class='span1'><b class='pro-num'>1</b>件</span>"
+          },
+          {
+            "p":" <span class='span1'>你已选择</span> <span class='span2'>'小甘菊'</span>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id":"16",
+    "data":[
+      {
+        "tittle":"图片",
+        "img":[
+          {
+            "src":"/static/img/id=2-02.jpg"
+          },
+          {
+            "src":"/static/img/renqi5.jpg"
+          },
+          {
+            "src":"/static/img/id=2-01.jpg"
+          }
+        ]
+
+      },
+      {
+        "tittle":"文字",
+        "word":[
+          {
+            "p": "<b><i></i>韩国 DiaForce 新款钻石贵妇黄金眼膜帖（日韩版本随机）60片/盒</b>"
+          },
+          {
+            "p": "都说眼睛是心灵的窗户，试想微笑时一双毫无黑眼圈，小细纹的明眸善睐，多么的让人温暖和感动？所以眼周护理怎能全都下注压在眼霜上，眼膜该上就要上！Diaforce黄金钻石贵妇凝胶眼膜问世，果冻凝胶质地大裹营养，一片吃饱一周的眼周营养；胶原蛋白凝胶，热水可溶解，敷完还可以洗脸用！黄金导入吸收，提拉紧致不是事儿，钻石粉缓解眼周暗黄。解锁全脸新用法，想贴哪就贴哪！ 拥有一双灵动的大眼睛就是这么简单！"
+          },
+          {
+            "p": "价格 <span class='span1'>¥79</span><span class='span2'>¥198</span> "
+          },
+          {
+            "p": "发货 <span class='span1'>国内保税仓</span> <span class='span2'>预计7个工作日内到货，部分偏远地区除外</span>"
+          },
+          {
+            "p": "税费 <span class='span1'>含税价，若配送期间产生税费，请联系客服</span>"
+          },
+          {
+            "p":""
+          },
+          {
+            "p":"化妆品净含量 <span class='span1'>90g  <i></i></span>"
+          },
+          {
+            "p":"数量 <span class='span1'><a class='add1'>-</a><input class='number' type='text' value='1' /><a class='add2' >+</a> 件</span>"
+          },
+          {
+            "p":"销量 <span class='span1'><b class='pro-num'>1</b>件</span>"
+          },
+          {
+            "p":" <span class='span1'>你已选择</span> <span class='span2'>'90g'</span>"
+          }
+        ]
+      }
+    ]
+  }
+]

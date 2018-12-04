@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车页面</title>
+    <link type="text/css" rel="stylesheet" href="css/css.css"/>
+    <link type="text/css" rel="stylesheet" href="css/cart.css"/>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/Js.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+<div id="header">
+    <div id="headerNav">
+        <div id="headerLeft">
+            <i></i><a href="#">帮海贝，畅享全球品质生活！</a>
+        </div>
+
+        <div id="headerRight">
+            <ul>
+                <li> <i class="i1"></i> </li>
+                <li> <i class="i2"></i> </li>
+                <li> <i class="i3"></i> </li>
+                <li id="usename"></li>
+                <li id="tuichu">退出</li>
+                <li class="denglu-li" > <a href="login.html" class="denglu-a">登录</a> </li>
+                <li class="zhuce-li"> <a href="register.html" class="zhuce-a">注册</a> </li>
+                <li class="lastLi">
+                    <i class="i4"></i>
+                    <a href="">手机版</a>
+                    <span  class="app-img"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--========右侧栏===================-->
+<div id="rightBar">
+    <div id="barContent">
+        <ul class="bar-list">
+            <li class="li1 li">
+                <div class="bar-item-logo erji"></div>
+                <!--<div class="bar-item1"></div>-->
+                <!--<div class="bar-item-tip">小帮帮咨询-->
+                    <!--<div class="bar-item1"></div>-->
+                <!--</div>-->
+            </li>
+            <li class="li2 li">
+                <div class="bar-item-logo weixin"></div>
+
+                <!--<div class="bar-item-tip">-->
+                    <!--<div class="bar-item1"></div>-->
+                    <!--<div class="bar-weixin"></div>-->
+                    <!--<p class="p1">关注享更多优惠信息</p>-->
+                <!--</div>-->
+            </li>
+            <!--<li class="li3">-->
+            <!--<a href="">-->
+            <!--<div class="bar-item-logo cart"></div>-->
+            <!--<div class="" style="font-size: 14px;width: 16px;height: 70px;margin-left: 10px;color: white">购物车<i>0</i></div>-->
+            <!--<div class="bar-item-tip" style="display: none"></div>-->
+            <!--</a>-->
+            <!--</li>-->
+            <li class="li4 li">
+                <div class="bar-item-logo collect"></div>
+                <!--<div class="bar-item1"></div>-->
+                <!--<a href="">-->
+
+                    <!--<div class="bar-item-tip">我的收藏-->
+                        <!--<div class="bar-item1"></div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            </li>
+            <li class="li5 li">
+                <div class="bar-item-logo code"></div>
+                <!--<div class="bar-item1"></div>-->
+                <!--<div class="bar-item-tip">-->
+                    <!--<div class="bar-item1"></div>-->
+                    <!--<div class="app-code"></div>-->
+                    <!--<p class="p2">下载APP 享更多优惠</p>-->
+                <!--</div>-->
+            </li>
+            <li class="li6">
+                <div class="bar-item-logo top"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--<div id="top">-->
+    <!--<div id="topContent">-->
+        <!--<div id="topLeft">-->
+            <!--<img src="img/top1.png" alt="">-->
+        <!--</div>-->
+        <!--<div id="topCenter">-->
+            <!--<input class="inp1" type="text" placeholder="在这里，淘遍全球正品好货" />-->
+            <!--<input class="inp2" type="button" value="搜索" />-->
+            <!--<ul>-->
+                <!--<li class="li1">大扫除</li>-->
+                <!--<li class="li1">开学季</li>-->
+                <!--<li>面膜</li>-->
+                <!--<li>防晒</li>-->
+                <!--<li>洗发护发</li>-->
+                <!--<li>裸妆</li>-->
+                <!--<li>健康生活</li>-->
+                <!--<li>宝宝哺乳</li>-->
+                <!--<li>身体护理</li>-->
+                <!--<li>卸妆</li>-->
+                <!--<li>纸尿裤</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div id="topRight">-->
+            <!--<a href="" class="a1"><i class="i1"></i> 400-085-0505 </a>-->
+            <!--<a href="" class="a1"><i class="i2"></i> kefu@b5m.com </a>-->
+            <!--<a href="#" class="a2"><i class="i3"></i>常见问题</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div id="cart-top">
+    <div class="top-left">
+        <a href="index.html" style="cursor: pointer"><img src="img/top1.png" alt=""></a>
+        <img src="img/imgs/cart1.png" alt="">
+    </div>
+    <div class="top-right">
+        <div class="box1">
+            <i></i> 全网帮购
+            <p><span></span>
+                可通过帮海贝可购买淘宝、京东、苏宁等电商的商品，<br />
+                享受帮海贝下单立减等超值优惠。真正实现一个账号，购遍全网。
+            </p>
+        </div>
+
+        <div class="box2">
+            <i></i> 优质服务
+            <p><span></span>
+                帮海贝会员顾问全程为您服务，帮您催发货、处理退货，为您向卖家争取最大权益，让您省心省力。
+            </p>
+        </div>
+        <div class="box3">
+            <i></i> 闪电退款
+            <p><span></span>
+                帮海贝支付退货退款。<br>
+                选择退超级帮钻3小时内即可到账。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="my-cart">
+    <div class="my-left">
+        <h2>我的购物车</h2>
+        <span>为了保证商品信息的时效性，超过 <i></i> <b>3天</b>的商品会失效</span>
+    </div>
+    <div class="my-right">
+        <span class="span1">我的购物车</span>
+        <span class="span2">确认订单信息</span>
+        <span class="span3">成功提交订单</span>
+    </div>
+</div>
+
+<div id="empty-cart" >
+    购物车空空如也，看看下面的热销商品吧
+</div>
+
+<div id="cart-head">
+    <input type="checkbox" class="inp-quanxuan" checked="checked"/>
+    <span class="span1">全选</span>
+    <span class="span2">商品名称</span>
+    <span class="span3">商品规格</span>
+    <span class="span4">单价(元)</span>
+    <span class="span5">数量</span>
+    <span class="span6">小计(元)</span>
+    <span class="span7">操作</span>
+</div>
+<!--=======热销=========-->
+<div id="hot">
+    <div class="hot-tittle">
+        <i></i>
+        <span>为您推荐的最热销商品</span>
+        <a href="">
+            展开<em></em>
+        </a>
+    </div>
+
+    <div class="hot-pro">
+        <div class="good-ground">
+            <img src="img/recommend-cor.png" alt="">
+        </div>
+        <div class="good-list">
+            <ul>
+                <li>
+                    <a href="">
+                        <img class="good-pic" src="img/cart1.jpg" alt="">
+                        <div class="good-info">
+                            <p class="p1">韩国 It's skin 伊思红参蜗牛面膜5片/盒</p>
+                            <span class="span1">¥132</span><span class="span2">¥175</span>
+                            <div>加入购物车</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="good-pic" src="img/cart2.jpg" alt="">
+                        <div class="good-info">
+                            <p class="p1">韩国 It's skin 伊思红参蜗牛面膜5片/盒</p>
+                            <span class="span1">¥132</span><span class="span2">¥175</span>
+                            <div>加入购物车</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img class="good-pic" src="img/cart3.jpg" alt="">
+                        <div class="good-info">
+                            <p class="p1">韩国 It's skin 伊思红参蜗牛面膜5片/盒</p>
+                            <span class="span1">¥132</span><span class="span2">¥175</span>
+                            <div>加入购物车</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--购物车商品===============-->
+<div id="product">
+    <div class="pro-head">
+        <input class="input1  inp-quanxuan" type="checkbox" checked="checked"><b>帮海贝-国内保税仓</b>
+    </div>
+
+    <div class="pro-msg">
+        <!--<ul>-->
+            <!--<li class="li1"><input type="checkbox"></li>-->
+            <!--<li class="li2"><img src="img/imgs/55.jpg" alt=""></li>-->
+            <!--<li class="li3"><a href="">美国 SKIP HOP 儿童动物系列吸管杯蜜蜂350ml</a></li>-->
+            <!--<li class="li4">颜色分类:蜜蜂;容量:350mL</li>-->
+            <!--<li class="li5">62.00</li>-->
+            <!--<li class="li6"><a>-</a><input type="text" value="1"><a>+</a></li>-->
+            <!--<li class="li7">62.00</li>-->
+            <!--<li class="li8"><a href="">删除</a></li>-->
+        <!--</ul>-->
+    </div>
+</div>
+
+<div id="check">
+    <input type="checkbox"  class="inp-quanxuan" checked="checked"> 全选 <a>删除</a>
+</div>
+
+<div id="pay">
+    <div class="pay-content">
+        <p>已选<b>1</b>件直邮商品</p>
+        <span class="span1">商品总额：</span><span class="span2">¥62.00</span><a class="span3">境外结算</a>
+    </div>
+</div>
+<!--底部共有部分===============-->
+<div id="bottom">
+    <div id="bottomBox1">
+        <a target="_blank" class="item" href="#">帮5采</a> |
+        <a target="_blank" class="item" href="#">帮海贝</a> |
+        <!-- a target="_blank" class="item" href="http://job.b5m.com/">加入我们</a> | -->
+        <a target="_blank" class="item" href="#">移动应用</a> |
+        <a target="_blank" class="item" href="#">广告联盟</a> |
+        <a target="_blank" class="item" href="#">使用条款</a>
+    </div>
+    <div id="bottomBox2">
+        <p> Copyright © 2011-2016&nbsp;<span style="white-space:normal;">上海载和网络科技有限公司</span>. All rights reserved. Powered by 上海载和网络科技有限公司<br>
+            增值电信业务经营许可证：沪B2-20130065号 | 中华人民共和国互联网药品信息服务资格证书（沪）-非经营性-2013-0034 沪卫(中医)网审【2015】10032号 沪ICP备11034776号-3 | 食品流通许可证：SP3101151410301755</p>
+    </div>
+    <div id="bottomBox3">
+        <a href=""><img src="img/shgs.gif" alt=""></a>
+        <a href=""><img src="img/cxwz.png" alt=""></a>
+        <a href=""><img src="img/315.gif" alt=""></a>
+        <a href=""><img src="img/cnnic.png" alt=""></a>
+        <a href=""><img src="img/bottom_small_img.png" alt=""></a>
+        <a href=""><img src="img/4b.png" alt=""></a>
+        <a href=""><img src="img/picp_bg.png" alt=""></a>
+
+    </div>
+</div>
+</body>
+</html>

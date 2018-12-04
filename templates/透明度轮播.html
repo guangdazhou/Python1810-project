@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #focus {
+            position: relative;
+            width: 810px;
+        }
+
+        #bigpic {
+            height: 320px;
+        }
+
+        #bigpic li {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #smallpic {
+            margin-top: 10px;
+        }
+
+        #smallpic li {
+            display: inline-block;
+        }
+
+        #smallpic img {
+            width: 120px;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -40px;
+            padding: 10px;
+            background: rgba(0, 0, 0, .2);
+            font-size: 30px;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .next {
+            left: auto;
+            right: 10px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, .5);
+        }
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+
+            var $focus = $('#focus');
+            var $bigpic = $('#bigpic');
+            var $smallpic = $('#smallpic');
+
+            var i = 0;//显示图片索引
+            var len = $bigpic.children('li').length;
+
+            var timer = setInterval(function(){
+
+
+                show()
+                i++;
+            },2000);
+
+            function show(){
+                $("#bigpic img").hide();
+                $("#bigpic img").eq(i).animate({
+
+                    opacity:1
+                },1000)
+            }
+        })
+    </script>
+</head>
+<body>
+<div id="focus">
+    <ul id="bigpic">
+        <li><img src="images/001.jpg"></li>
+        <li><img src="images/002.jpg"></li>
+        <li><img src="images/003.jpg"></li>
+    </ul>
+    <a href="#" class="prev">&lt;</a>
+    <a href="#" class="next">&gt;</a>
+</div>
+</body>
+</html>
