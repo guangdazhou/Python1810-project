@@ -782,12 +782,13 @@ body{
 }
 #recommend #recLeft #recContent #recConttop .recContent .recBox{
     width: 192px;
-    height: 282px;
+    height: 260px;
     float: left;
     margin-top: 5px;
     margin-left: 5px;
     border: 1px solid white;
     /*box-shadow: 3px 3px 3px;*/
+    overflow: hidden;
 }
 #recommend #recLeft #recContent #recConttop .recContent .recBox .a1{
     display: block;
