@@ -36,7 +36,7 @@ class Showgoods(models.Model):
         db_table = "app_showgoods"
 
 class Cart(models.Model):
-    user = models.FloatField(User)
+    user = models.ForeignKey(User)
 
     showgoods = models.ForeignKey(Showgoods)
 

@@ -496,7 +496,14 @@
                         <p class="p7">数量
                             <span class="span1">
                                 <span class="glyphicon glyphicon-minus" showgoodsid="{{ showgood.id }}"></span>
-                                <b class="num1" style="color: black">2</b>
+                                <b class="num1" style="color: black">
+                                    {% for cart in carts %}
+                                        {% if showgood.id == cart.showgoods_id %}
+                                            {{ cart.number }}
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </b>
                                 <span class="glyphicon glyphicon-plus" showgoodsid="{{ showgood.id }}"></span>
 
                             </span>

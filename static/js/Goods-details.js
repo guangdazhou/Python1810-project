@@ -342,5 +342,24 @@ $(function () {
 
     })
 
+    $('.span1 .glyphicon-minus').click(function () {
+        // 商品ID
+        var showgoodsid = $(this).attr('showgoodsid')
+        var $that = $(this)
+
+        // 发起ajax请求
+        $.get('/subcart/', {'showgoodsid': showgoodsid}, function (response) {
+            console.log(response)
+            if (response.status == 1) {  // 操作成功
+                var number = response.number
+                if (number > 0) {   // 显示，改变个数
+                    $that.next().html(number)
+                } else {   // 隐藏减号和个数
+                    $that.next().hide()
+                    $that.hide()
+                }
+            }
+        })
+    })
 
 });
