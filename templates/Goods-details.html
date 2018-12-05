@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link type="text/css" rel="stylesheet" href="{% static 'css/css.css' %}"/>
-
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/Js.js' %}"></script>
     <script src="{% static 'js/Goods-details.js' %}"></script>
     <script src="{% static 'js/jquery.cookie.js' %}"></script>
@@ -456,12 +457,12 @@
                         </div>
 
                         <!--============大图=========-->
-                        <div id="bigArea" class="img-json"
-                             style=" overflow: hidden;width: 300px;height: 300px; position: absolute;left: 470px;top: 108px;z-index: 9999;">
-
-
+{#                        <div id="bigArea" class="img-json"#}
+{#                             style=" overflow: hidden;width: 300px;height: 300px; position: absolute;left: 470px;top: 108px;z-index: 9999;">#}
+{##}
+{##}
                             {#                            <img id="bigImg" src="{{ showgood.img1 }}" alt="" />#}
-                        </div>
+{#                        </div>#}
 
 
                         <div id="goods-small-img">
@@ -494,11 +495,14 @@
                         <p class="p6">容量 <span class="span1"> {{ showgood.span3 }} <i></i></span></p>
                         <p class="p7">数量
                             <span class="span1">
-                            <a>-</a><input type="text" value="1"/><a>+</a> 件
-                        </span>
+                                <span class="glyphicon glyphicon-minus" showgoodsid="{{ showgood.id }}"></span>
+                                <b class="num1" style="color: black">2</b>
+                                <span class="glyphicon glyphicon-plus" showgoodsid="{{ showgood.id }}"></span>
+
+                            </span>
                         </p>
                         <p class="p8">销量 <span class="span1"><b>{{ showgood.span4 }}</b>件</span></p>
-                        {#                        <p class="p9"><span class="span1">你已选择</span> <span class="span2">"蜜蜂"、"350mL"</span></p>#}
+{#                                                <p class="p9"><span class="span1"></span> <span class="span2">"蜜蜂"、"350mL"</span></p>#}
                         <p class="p10"><a><input class="inp1" type="button" value="立即购买"></a> <a><input class="inp2"
                                                                                                         type="button"
                                                                                                         value="加入购物车"></a>

@@ -34,3 +34,15 @@ class Showgoods(models.Model):
 
     class Meta:
         db_table = "app_showgoods"
+
+class Cart(models.Model):
+    user = models.FloatField(User)
+
+    showgoods = models.ForeignKey(Showgoods)
+
+    number = models.IntegerField()
+
+    isselect = models.BooleanField(default=True)
+
+    class Meta:
+        db_table = 'app_cart'

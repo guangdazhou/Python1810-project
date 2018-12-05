@@ -8,4 +8,6 @@ urlpatterns = [
     url(r'^login/$', views.login, name='login'), # 登录
     url(r'^logout/$', views.logout, name='logout'), # 退出
     url(r'^GoodsDetails/(\w+)/$', views.GoodsDetails, name='GoodsDetails'),
+    url(r'^addcart/$', views.addcart, name='addcart'),  # 添加购物车
+
 ]
