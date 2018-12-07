@@ -33,7 +33,7 @@ def register(request): # 注册
             user.save()
 
             request.session['username'] = username
-            request.session.set_expiry(180)
+            # request.session.set_expiry(180)
 
 
             return redirect('app:index')
@@ -151,3 +151,44 @@ def subcart(request):
     }
 
     return JsonResponse(responseData)
+
+
+def cart(request):
+    username = request.session.get('username')
+    user = User.objects.get(username=username)
+    carts = Cart.objects.filter(user=user)
+
+
+    return render(request,'cart.html',context={'username': user.username, 'carts': carts})
+
+
+def changecartstatus(request):
+    cartid = request.GET.get('cartid')
+    cart = Cart.objects.get(pk=cartid)
+    cart.isselect = not cart.isselect
+    cart.save()
+
+    responseData = {
+        'msg': '选中状态改变',
+        'status': 1,
+        'isselect': cart.isselect
+    }
+
+    return JsonResponse(responseData)
+
+
+def changecartselect(request):
+    isselect = request.GET.get('isselect')
+    if isselect == 'true':
+        isselect = True
+    else:
+        isselect = False
+
+    username = request.session.get('username')
+    user = User.objects.get(username=username)
+    carts = Cart.objects.filter(user=user)
+    for cart in carts:
+        cart.isselect = isselect
+        cart.save()
+
+    return JsonResponse({'msg':'反选操作成功', 'status':1})
