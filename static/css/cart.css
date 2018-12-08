@@ -667,3 +667,14 @@ body {
     /*height: 320px;*/
     line-height: 100px;
 }
+.bill-right{
+    /*border: 1px black solid;*/
+    background: orange;
+    cursor: pointer;
+    text-align: center;
+    color: whitesmoke;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    width: 90px;
+}

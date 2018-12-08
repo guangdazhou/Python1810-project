@@ -88,15 +88,15 @@ $(function () {
 
 
     // 下单
-    // $('#generateorder').click(function () {
-    //     $.get('/generateorder/', function (response) {
-    //         console.log(response)
-    //         if (response.status == 1){  // 跳转到订单详情
-    //             window.open('/orderinfo/'+response.identifier +
-    //             '/', target='_self')
-    //         }
-    //     })
-    // })
+    $('#generateorder').click(function () {
+        $.get('/generateorder/', function (response) {
+            console.log(response)
+            if (response.status == 1){  // 跳转到订单详情
+                window.open('/orderinfo/'+response.identifier +
+                '/', target='_self')
+            }
+        })
+    })
 })
 
 
