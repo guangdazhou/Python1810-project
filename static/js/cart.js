@@ -77,7 +77,7 @@ $(function () {
             if ($confirm.find('.glyphicon-ok').length) {
                 var price = $content.find('#price').attr('price')
                 var num = $content.find('#num').attr('number')
-                sum = price * num
+                sum += price * num
             }
         })
 

@@ -234,13 +234,9 @@
 </div>
 <!--购物车商品===============-->
 <div id="product">
-    <div class="pro-head">
-        {#        <input class="input1  inp-quanxuan" type="checkbox" checked="checked"><b>帮海贝-国内保税仓</b>#}
-    </div>
-
-    <div class="pro-msg">
+    <ul>
         {% for cart in carts %}
-            <ul>
+            <div class="pro-msg">
                 <li class="li1">
                     <div class="confirm-wrapper" cartid="{{ cart.id }}" isselect="{{ cart.isselect }}">
                         {#                        <span class="glyphicon glyphicon-ok"></span>#}
@@ -256,13 +252,13 @@
                     <li class="li2"><img src="{{ cart.showgoods.img2 }}" alt=""></li>
                     <li class="li3">{{ cart.showgoods.title }}</li>
                     <li class="li4">颜色：{{ cart.showgoods.span2 }}</li>
-{#                    <p class="price" price="{{ cart.goods.marketprice }}">#}
-{#                        ￥{{ cart.goods.marketprice }}#}
-{#                    </p>#}
-{#                    <p class="num" number="{{ cart.number }}">#}
-{#                        x{{ cart.number }}#}
-{#                    </p>#}
-                    <li class="li5"  id="price" price="{{ cart.showgoods.span1 }}">单价：￥{{ cart.showgoods.span1 }}</li>
+                    {#                    <p class="price" price="{{ cart.goods.marketprice }}">#}
+                    {#                        ￥{{ cart.goods.marketprice }}#}
+                    {#                    </p>#}
+                    {#                    <p class="num" number="{{ cart.number }}">#}
+                    {#                        x{{ cart.number }}#}
+                    {#                    </p>#}
+                    <li class="li5" id="price" price="{{ cart.showgoods.span1 }}">单价：￥{{ cart.showgoods.span1 }}</li>
                     <li class="li6" id="num" number="{{ cart.number }}">
                         {#                    <span class="glyphicon glyphicon-minus"></span>#}
                         数量：<b>{{ cart.number }}</b>
@@ -271,9 +267,9 @@
                     {#                <li class="li7">{{ cart.showgoods.span1 }}</li>#}
                     {#                <li class="li8"><a href="">删除</a></li>#}
                 </div>
-            </ul>
+            </div>
         {% endfor %}
-    </div>
+    </ul>
 </div>
 
 <div id="check">

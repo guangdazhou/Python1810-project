@@ -374,19 +374,20 @@ body {
 #product {
     width: 1180px;
     /*height: 140px;*/
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin-bottom: 120px;
     background: #fffcef;
     border: 1px solid #fff3cd;
     display: block;
 }
 
-#product .pro-head {
-    width: 1178px;
-    height: 35px;
-    font-size: 14px;
-    line-height: 35px;
+/*#product .pro-head {*/
+/*width: 1178px;*/
+/*height: 35px;*/
+/*font-size: 14px;*/
+/*line-height: 35px;*/
 
-}
+/*}*/
 
 #product .pro-head .input1 {
     display: inline-block;
@@ -402,42 +403,44 @@ body {
     margin: 0 auto;
     overflow: hidden;
     border-bottom: 1px dashed grey;
-    background: white;
+    background: lightgrey;
+    left: 20px;
 
 }
 
-#product .pro-msg ul {
+#product .pro-msg {
     width: 1158px;
     height: 110px;
     float: left;
+    margin-left: 340px;
 }
 
-#product .pro-msg ul li {
+#product ul .pro-msg li {
     float: left;
     font-size: 15px;
     text-align: center;
     vertical-align: middle;
 }
 
-#product .pro-msg ul .li1 {
+#product ul .pro-msg .li1 {
     margin: 40px 0 0 30px;
 }
 
-#product .pro-msg ul .li2 {
+#product ul .pro-msg .li2 {
     width: 55px;
     height: 55px;
     border: 1px solid lightgrey;
     margin: 20px;
 }
 
-#product .pro-msg ul .li3 {
+#product ul .pro-msg .li3 {
     margin-top: 27px;
     display: inline-block;
     width: 250px;
     color: black;
 }
 
-#product .pro-msg ul .li3 a {
+#product ul .pro-msg .li3 a {
     display: inline-block;
     text-align: left;
     width: 226px;
@@ -446,27 +449,28 @@ body {
     color: black;
 }
 
-#product .pro-msg ul .li4 {
+#product ul .pro-msg .li4 {
     width: 160px;
     margin: 37px 40px;
     line-height: 20px;
     color: black;
 }
 
-#product .pro-msg ul .li5 {
+#product ul .pro-msg .li5 {
     margin: 37px 40px;
     line-height: 20px;
     color: #000;
     font-weight: bold;
 }
 
-#product .pro-msg ul .li6 {
+#product ul .pro-msg .li6 {
     margin: 35px;
     color: orange;
     font-size: 18px;
     /*border: 1px black dashed;*/
 }
-#product .pro-msg ul .li6 b{
+
+#product ul .pro-msg .li6 b {
     /*margin: 35px;*/
     color: red;
     font-size: 18px;
@@ -477,7 +481,7 @@ body {
 
 }
 
-#product .pro-msg ul .li6 a {
+#product ul .pro-msg .li6 a {
     display: inline-block;
     width: 17px;
     height: 25px;
@@ -488,7 +492,7 @@ body {
     cursor: pointer;
 }
 
-#product .pro-msg ul .li6 input {
+#product ul .pro-msg .li6 input {
     width: 30px;
     height: 23px;
     vertical-align: bottom;
@@ -496,14 +500,14 @@ body {
     line-height: 23px;
 }
 
-#product .pro-msg ul .li7 {
+#product ul .pro-msg .li7 {
     margin: 37px 40px;
     line-height: 20px;
     color: #ff7a4d;
 
 }
 
-#product .pro-msg ul .li8 {
+#product ul .pro-msg .li8 {
 
     margin: 37px 40px;
     line-height: 20px;
@@ -511,7 +515,7 @@ body {
 
 }
 
-#product .pro-msg ul .li8 a {
+#product ul .pro-msg .li8 a {
     text-decoration: none;
     cursor: pointer;
 }
@@ -521,22 +525,23 @@ body {
     width: 1180px;
     height: 55px;
     margin: 15px auto;
-    background: lightgrey;
+    /*background: lightgrey;*/
     font-size: 13px;
     color: #666;
     display: block;
     cursor: pointer;
+    margin-left: 400px;
 }
 
-#check input {
-    width: 14px;
-    height: 14px;
-    border-radius: 2px;
-    background: #ff7a4d;
-    margin: 20px 10px;
-}
+/*#check .all {*/
+    /*!*width: 14px;*!*/
+    /*!*height: 14px;*!*/
+    /*!*border-radius: 2px;*!*/
+    /*background: #ff7a4d;*/
+    /*!*margin: 20px 10px;*!*/
+/*}*/
 
-#check a {
+#check b {
     text-decoration: none;
     font-size: 13px;
     color: #666;
@@ -549,7 +554,7 @@ body {
     width: 1180px;
     height: 60px;
     margin: 15px auto;
-    background: lightgrey;
+    /*background: lightgrey;*/
     color: #333;
     display: block;
 }
@@ -573,7 +578,7 @@ body {
 
 #pay .pay-content .span1 {
     font-size: 13px;
-    color: #333;
+    /*color: #333;*/
 }
 
 #pay .pay-content .span2 {
@@ -600,22 +605,22 @@ body {
 }
 
 /*.confirm-wrapper .no {*/
-    /*display: inline-block;*/
-    /*width: 2rem;*/
-    /*height: 2rem;*/
-    /*!*border-radius: 50%;*!*/
-    /*border: 2px solid grey;*/
+/*display: inline-block;*/
+/*width: 2rem;*/
+/*height: 2rem;*/
+/*!*border-radius: 50%;*!*/
+/*border: 2px solid grey;*/
 /*}*/
 
 /*.confirm-wrapper .glyphicon-ok {*/
-    /*!*background: red;*!*/
-    /*color: red;*/
-    /*!*border-radius: 50%;*!*/
-    /*width: 2rem;*/
-    /*height: 2rem;*/
-    /*font-size: 1.8rem;*/
-    /*line-height: 2 r;*/
-    /*border: 1px solid grey;*/
+/*!*background: red;*!*/
+/*color: red;*/
+/*!*border-radius: 50%;*!*/
+/*width: 2rem;*/
+/*height: 2rem;*/
+/*font-size: 1.8rem;*/
+/*line-height: 2 r;*/
+/*border: 1px solid grey;*/
 /*}*/
 
 .all {
@@ -637,20 +642,28 @@ body {
     background: whitesmoke;
     cursor: pointer;
 }
-.glyphicon-ok{
-     color: red;
+
+.glyphicon-ok {
+    color: red;
     /*border-radius: 50%;*/
     width: 2rem;
     height: 2rem;
     font-size: 1.8rem;
-    line-height: 2 r;
+    line-height: 2rem;
     border: 1px solid grey;
     background: white;
     margin: 10px 10px;
     cursor: pointer;
 }
-.shouye{
+
+.shouye {
     color: red;
     font-size: 15px;
     text-align: center;
+}
+#bottom{
+    top: 200px;
+    margin-top: 500px;
+    /*height: 320px;*/
+    line-height: 100px;
 }
