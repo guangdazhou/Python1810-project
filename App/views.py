@@ -71,15 +71,22 @@ def logout(request):
 
 
 def GoodsDetails(request,goodsid): # 商品详细信息展示页面
+    username = request.session.get('username')
     showgoods = Showgoods.objects.filter(goodsid=goodsid)
-    carts = Cart.objects.all()
+    if username:
+        carts = Cart.objects.all()
 
-    data = {
-        'showgoods':showgoods,
-        'carts':carts,
-    }
+        data = {
+            'showgoods': showgoods,
+            'carts': carts,
+        }
 
-    return render(request, 'Goods-details.html', context=data)
+        return render(request, 'Goods-details.html', context=data)
+    else:
+        data = {
+            'showgoods':showgoods
+        }
+        return render(request,'Goods-details.html',context=data)
 
 
 def addcart(request):
@@ -158,11 +165,16 @@ def subcart(request):
 
 def cart(request):
     username = request.session.get('username')
-    user = User.objects.get(username=username)
-    carts = Cart.objects.filter(user=user)
+    if username:
+        user = User.objects.get(username=username)
+        carts = Cart.objects.filter(user=user).exclude(number=0)
 
 
-    return render(request,'cart.html',context={'username': user.username, 'carts': carts})
+        return render(request,'cart.html',context={'username': user.username, 'carts': carts})
+
+    else:
+        return redirect('app:login')
+
 
 
 def changecartstatus(request):
@@ -208,23 +220,27 @@ def generateorder(request):
 
     # 订单商品
     carts = Cart.objects.filter(user=user).filter(isselect=True)
-    for cart in carts:
-        orderGoods = OrderGoods()
-        orderGoods.order = order
-        orderGoods.showgoods = cart.showgoods
-        orderGoods.number = cart.number
-        orderGoods.save()
+    if carts.exists():
+        for cart in carts:
+            orderGoods = OrderGoods()
+            orderGoods.order = order
+            orderGoods.showgoods = cart.showgoods
+            orderGoods.number = cart.number
+            orderGoods.save()
 
-        # 从购物车移除
-        cart.delete()
+            # 从购物车移除
+            cart.delete()
 
-    responseData = {
-        'msg':'订单生成成功',
-        'status': 1,
-        'identifier': order.identifier
-    }
+        responseData = {
+            'msg': '订单生成成功',
+            'status': 1,
+            'identifier': order.identifier
+        }
 
-    return JsonResponse(responseData)
+        return JsonResponse(responseData)
+    else:
+        pass
+
 
 
 def orderinfo(request, identifier):
